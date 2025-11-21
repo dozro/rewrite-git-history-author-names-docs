@@ -73,3 +73,53 @@ git re-sign -signOnBranch main
 
 Warning: This will have serious side effects.
 
+### After rewriting author names or emails
+
+```bash
+git filter-repo --mailmap .mailmap
+```
+
+If you changed author/committer information
+
+```bash
+git re-sign -signOnBranch corrected-signed
+```
+
+…then rebuild and re-sign commits
+
+### Migrate a repository from unsigned → signed commits
+
+```bash
+git config commit.gpgsign true
+git re-sign -signOnBranch signed-history
+```
+
+### Migrate from GPG to SSH signing
+
+```bash
+git config gpg.format ssh
+git config user.signingkey ~/.ssh/id_ed25519.pub
+git re-sign -signOnBranch ssh-signed
+```
+
+In some cases you might want to switch from GPG signing to ssh signing.
+
+This tool can help keeping the git history consistent
+
+### Replace a remote branch with the re-signed history (force push!)
+
+```bash
+git re-sign
+git checkout resigned
+git push origin HEAD:main --force
+```
+
+Dangerous action: do not do this on shared branches unless coordinated.
+
+## Important
+
+```bash
+git log signed-history --show-signature
+```
+
+Inspect rewritten commits before pushing

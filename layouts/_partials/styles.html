@@ -1,0 +1,22 @@
+{{ $isDev := ne hugo.Environment "production" }}
+{{ $cssOpts := (dict "targetPath" "styles/screen.css" "enableSourceMap" $isDev ) }}
+{{ $screenCSS := resources.Get "scss/slate/screen.css.scss" | toCSS $cssOpts }}
+{{ $cssOpts = (dict "targetPath" "styles/print.css" "enableSourceMap" $isDev ) }}
+{{ $printCSS := resources.Get "scss/slate/print.css.scss" | toCSS $cssOpts }}
+{{ if not $isDev }}
+  {{ $printCSS = $printCSS |  postCSS | minify | fingerprint }}
+  {{ $screenCSS = $screenCSS |  postCSS | minify | fingerprint }}
+{{ end }}
+<link
+  href="{{ $screenCSS.RelPermalink }}"
+  rel="stylesheet"
+  media="screen"
+  {{ if not $isDev }}integrity="{{ $screenCSS.Data.Integrity }}"{{ end }} />
+<link
+  href="{{ $printCSS.RelPermalink }}"
+  rel="stylesheet"
+  media="print"
+  {{ if not $isDev }}integrity="{{ $printCSS.Data.Integrity }}"{{ end }} />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.17.0/devicon.min.css" integrity="sha512-6/05LVs+grXBAu5XzdiMFB64yCVF9FL70zWrTKcaTEKygrO7fC5LqfL/SKPpuRpimL2aE0D7Hw/NoED+7+7/VQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">

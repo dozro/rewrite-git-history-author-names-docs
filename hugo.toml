@@ -1,0 +1,57 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'Rewrite Git History'
+
+disableKinds = ["taxonomy"]
+
+pygmentsCodefences            = true
+pygmentsCodeFencesGuesSsyntax = false
+pygmentsOptions               = ""
+pygmentsStyle                 = "monokai"
+pygmentsUseClasses            = false
+
+defaultContentLanguage = "en"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      autoHeadingIDType = "github-ascii"
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[[module.imports]]
+path = "github.com/bep/docuapi/v2"
+
+[[module.imports]]
+path = "codeberg.org/dozrye/hugo-mod-shields-badges"
+
+[params]
+  search       = true
+  maxMenuDepth = 3    # (optional) available options are: 1, 2, or 3 (default: 2)
+
+  [[params.language_tabs]]
+    key  = "bash"
+    name = "Shell"
+  [[params.language_tabs]]
+    key = "makefile"
+    name = "Makefile"
+  [[params.language_tabs]]
+    key  = "go"
+    name = "Go"
+
+[languages]
+
+  [languages.en]
+    languageName = "English"
+    weight       = 2
+    title        = "Manual on rewriting git history"
+    [languages.en.params]
+      toc_footers = [
+        "[About Rye](https://about.itsrye.dev)",
+        "<i class='devicon-forgejo-plain' style='color: #DCA1A1'></i>Source Code of [the documentation](https://codeberg.org/dozrye/rewrite-git-history-docs)",
+        "<i class='devicon-github-original colored' style='color: #DCA1A1'></i> Source Code of [the software](https://github.com/dozro/rewrite-git-history-author-names)",
+        "---",
+        "Documentation Powered by [DocuAPI](https://github.com/bep/docuapi)",
+        "Hugo Theme by [bep](https://github.com/bep)",
+      ]

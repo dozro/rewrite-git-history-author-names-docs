@@ -1,0 +1,11 @@
+codeberg.org/dozrye/hugo-mod-shields-badges v0.0.0-20251119214945-1c66ae455b1f h1:mkATxWPwRhJFXQ2yDNFwpoAQ9F/bFuL1aSRDXPW81ws=
+codeberg.org/dozrye/hugo-mod-shields-badges v0.0.0-20251119214945-1c66ae455b1f/go.mod h1:RQ6qxLSrRuGdDdBbu6bkx0oT55MWrGxW7VylLa4nbYw=
+github.com/bep/docuapi/v2 v2.4.2 h1:cw+1nRAI11VCgRVTHOlsYhaxjO2pwQkDMl7Y1X1ySR0=
+github.com/bep/docuapi/v2 v2.4.2/go.mod h1:3wLOeVtAUkqA/oMrCtT7p2RyxkIgssvarP3aLSikxwM=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.21000.20300/go.mod h1:WWQxcmPs5Xy3xDgi29ipkmZT6NKVb3bsqyCDTY3eYYY=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.21300.20800 h1:I2GanY0QJglzHgnPIB3IK1uUcSNQjPyc30l6Qz7Ajwo=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.21300.20800/go.mod h1:WWQxcmPs5Xy3xDgi29ipkmZT6NKVb3bsqyCDTY3eYYY=
+github.com/olivernn/lunr.js v2.3.9+incompatible h1:eH8iBnjlR4mwlYDdNuqy9PCNLjp2bEs6aoNnTSaccx0=
+github.com/olivernn/lunr.js v2.3.9+incompatible/go.mod h1:yEkQ1DUSMtNsn8n2CqvQXZd0ErWPEG8g9QRmblR+KS8=
+github.com/slatedocs/slate v2.13.1+incompatible h1:jjt8PlqJB0YYukqCs1xrkXabmsj3DwMVrVkpmFJuoH8=
+github.com/slatedocs/slate v2.13.1+incompatible/go.mod h1:n698aXLkExWIlF7prJey0Kq6wlKIKvj/stVb5oouZDM=

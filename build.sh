@@ -45,6 +45,10 @@ main() {
   rm "node-v${NODE_VERSION}-linux-x64.tar.xz"
   export PATH="${HOME}/.local/node-v${NODE_VERSION}-linux-x64/bin:${PATH}"
 
+  # Install Postcss
+  echo "Installing Postcss"
+  npm i -D postcss postcss-cli autoprefixer
+
   # Verify installations
   echo "Verifying installations..."
   echo Dart Sass: "$(sass --version)"
